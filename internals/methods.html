@@ -5,7 +5,7 @@
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Calling Methods &mdash; Phalcon7 1.2.1 文档</title>
+    <title>调用方法（Calling Methods） &mdash; Phalcon7 1.2.1 文档</title>
     <meta name="keywords" content="php, phalcon, phalcon7, phalcon php, php framework, faster php framework">
     <link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../static/phalcon.css" />
@@ -75,9 +75,9 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><a href="../index.html">內容目录</a></div>
 			<div class="panel-body"><ul>
-<li><a class="reference internal" href="#">Calling Methods</a><ul>
-<li><a class="reference internal" href="#instance-methods">Instance methods</a></li>
-<li><a class="reference internal" href="#static-methods">Static methods</a></li>
+<li><a class="reference internal" href="#">调用方法（Calling Methods）</a><ul>
+<li><a class="reference internal" href="#instance-methods">调用实例方法（Instance methods）</a></li>
+<li><a class="reference internal" href="#static-methods">调用静态方法（Static methods）</a></li>
 </ul>
 </li>
 </ul>
@@ -91,13 +91,13 @@
 			<div class="body" >
 			  
   <div class="section" id="calling-methods">
-<h1>Calling Methods<a class="headerlink" href="#calling-methods" title="永久链接至标题">¶</a></h1>
+<h1>调用方法（Calling Methods）<a class="headerlink" href="#calling-methods" title="永久链接至标题">¶</a></h1>
 <p>As seen when calling functions, in Phalcon the methods are called in the PHP userland. Thanks to this, a Phalcon
 user can generate a backtrace and know exactly which components are involved in a given task. They also
 allows users to replace Phalcon components by PHP classes of their own. Additionally,
 like everything else we&#8217;ve seen, the way to make calls is familiar to PHP developers.</p>
 <div class="section" id="instance-methods">
-<h2>Instance methods<a class="headerlink" href="#instance-methods" title="永久链接至标题">¶</a></h2>
+<h2>调用实例方法（Instance methods）<a class="headerlink" href="#instance-methods" title="永久链接至标题">¶</a></h2>
 <div class="highlight-c"><div class="highlight"><pre><span></span><span class="c1">// Define the connection DSN</span>
 <span class="n">ZVAL_STRING</span><span class="p">(</span><span class="o">&amp;</span><span class="n">dsn</span><span class="p">,</span> <span class="s">&quot;mysql:host=localhost;username=root;password=secret;dbname=some&quot;</span><span class="p">);</span>
 
@@ -117,7 +117,7 @@ like everything else we&#8217;ve seen, the way to make calls is familiar to PHP 
 </div>
 </div>
 <div class="section" id="static-methods">
-<h2>Static methods<a class="headerlink" href="#static-methods" title="永久链接至标题">¶</a></h2>
+<h2>调用静态方法（Static methods）<a class="headerlink" href="#static-methods" title="永久链接至标题">¶</a></h2>
 <div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">ZVAL_STRING</span><span class="p">(</span><span class="o">&amp;</span><span class="n">some_variable</span><span class="p">,</span> <span class="s">&quot;invoices_detail&quot;</span><span class="p">);</span>
 
 <span class="c1">// Calling Phalcon\Text::camelize(&quot;invoices_detail&quot;)</span>

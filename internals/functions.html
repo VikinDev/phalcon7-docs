@@ -5,7 +5,7 @@
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Calling Functions &mdash; Phalcon7 1.2.1 文档</title>
+    <title>调用函数（Calling Functions） &mdash; Phalcon7 1.2.1 文档</title>
     <meta name="keywords" content="php, phalcon, phalcon7, phalcon php, php framework, faster php framework">
     <link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../static/phalcon.css" />
@@ -82,7 +82,7 @@
 			<div class="body" >
 			  
   <div class="section" id="calling-functions">
-<h1>Calling Functions<a class="headerlink" href="#calling-functions" title="永久链接至标题">¶</a></h1>
+<h1>调用函数（Calling Functions）<a class="headerlink" href="#calling-functions" title="永久链接至标题">¶</a></h1>
 <p>Calling functions is another common action we do when create programs in PHP. Although many functions may be called directly using its internal function pointer in C, others can simply being called using the PHP userland. For example:</p>
 <div class="highlight-c"><div class="highlight"><pre><span></span><span class="c1">// $length = strlen(some_variable);</span>
 <span class="n">PHALCON_CALL_FUNCTION</span><span class="p">(</span><span class="o">&amp;</span><span class="n">length</span><span class="p">,</span> <span class="s">&quot;strlen&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">some_variable</span><span class="p">);</span>
