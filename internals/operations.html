@@ -5,7 +5,7 @@
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Operations between Variables &mdash; Phalcon7 1.2.1 文档</title>
+    <title>变量之间的操作（Operations between Variables） &mdash; Phalcon7 1.2.1 文档</title>
     <meta name="keywords" content="php, phalcon, phalcon7, phalcon php, php framework, faster php framework">
     <link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../static/phalcon.css" />
@@ -75,8 +75,8 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><a href="../index.html">內容目录</a></div>
 			<div class="panel-body"><ul>
-<li><a class="reference internal" href="#">Operations between Variables</a><ul>
-<li><a class="reference internal" href="#concatenation">Concatenation</a></li>
+<li><a class="reference internal" href="#">变量之间的操作（Operations between Variables）</a><ul>
+<li><a class="reference internal" href="#concatenation">连接（Concatenation）</a></li>
 </ul>
 </li>
 </ul>
@@ -90,9 +90,8 @@
 			<div class="body" >
 			  
   <div class="section" id="operations-between-variables">
-<h1>Operations between Variables<a class="headerlink" href="#operations-between-variables" title="永久链接至标题">¶</a></h1>
-<p>PHP is a dynamic language, we can do almost any operation between two variables, regardless of type. Sometimes we do
-not know exactly the type of data that have the variables, using the Zend API we can do operations between them seamlessly:</p>
+<h1>变量之间的操作（Operations between Variables）<a class="headerlink" href="#operations-between-variables" title="永久链接至标题">¶</a></h1>
+<p>我们几乎可以做任何类型的两个变量之间的进行操作，当我们不知道确切的数据类型时，我们可以使用 Zend API 操作它们：</p>
 <div class="highlight-c"><div class="highlight"><pre><span></span><span class="c1">// First variable is string but it&#39;s a numeric string</span>
 <span class="n">ZVAL_STRING</span><span class="p">(</span><span class="o">&amp;</span><span class="n">first_var</span><span class="p">,</span> <span class="s">&quot;100.10&quot;</span><span class="p">);</span>
 
@@ -104,9 +103,8 @@ not know exactly the type of data that have the variables, using the Zend API we
 </pre></div>
 </div>
 <div class="section" id="concatenation">
-<h2>Concatenation<a class="headerlink" href="#concatenation" title="永久链接至标题">¶</a></h2>
-<p>Concatenation is one of the most common operations we do in PHP. However, using the Zend API can be tedious when
-oncatenating many values​​, for example:</p>
+<h2>连接（Concatenation）<a class="headerlink" href="#concatenation" title="永久链接至标题">¶</a></h2>
+<p>在 PHP 中连接操作是最频繁的操作之一，我一样可以使用 Zend API 简单实现多个值的拼接：</p>
 <div class="highlight-c"><div class="highlight"><pre><span></span><span class="c1">// The following concatention using just Zend API:</span>
 <span class="c1">//</span>
 <span class="c1">// $month = &quot;July&quot;; $day = 1;</span>

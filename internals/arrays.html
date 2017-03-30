@@ -5,7 +5,7 @@
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Working with Arrays &mdash; Phalcon7 1.2.1 文档</title>
+    <title>数组（Working with Arrays） &mdash; Phalcon7 1.2.1 文档</title>
     <meta name="keywords" content="php, phalcon, phalcon7, phalcon php, php framework, faster php framework">
     <link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../static/phalcon.css" />
@@ -75,8 +75,8 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><a href="../index.html">內容目录</a></div>
 			<div class="panel-body"><ul>
-<li><a class="reference internal" href="#">Working with Arrays</a><ul>
-<li><a class="reference internal" href="#one-dimension-arrays">One dimension Arrays</a></li>
+<li><a class="reference internal" href="#">数组（Working with Arrays）</a><ul>
+<li><a class="reference internal" href="#one-dimension-arrays">一维数组（One dimension Arrays）</a></li>
 </ul>
 </li>
 </ul>
@@ -90,11 +90,10 @@
 			<div class="body" >
 			  
   <div class="section" id="working-with-arrays">
-<h1>Working with Arrays<a class="headerlink" href="#working-with-arrays" title="永久链接至标题">¶</a></h1>
-<p>Although the Zend API provides several functions for working with arrays, the Phalcon API has added others.
-Specifically helping to maintain the reference counting correctly:</p>
+<h1>数组（Working with Arrays）<a class="headerlink" href="#working-with-arrays" title="永久链接至标题">¶</a></h1>
+<p>尽管 Zend API 提供了一些函数来处理数组，但 Phalcon API 中在此基础上封装了更多的函数（kernel/array.h），自动处理引用计数：</p>
 <div class="section" id="one-dimension-arrays">
-<h2>One dimension Arrays<a class="headerlink" href="#one-dimension-arrays" title="永久链接至标题">¶</a></h2>
+<h2>一维数组（One dimension Arrays）<a class="headerlink" href="#one-dimension-arrays" title="永久链接至标题">¶</a></h2>
 <div class="highlight-c"><div class="highlight"><pre><span></span><span class="n">zval</span> <span class="n">fruits</span> <span class="o">=</span> <span class="p">{},</span> <span class="n">first_item</span> <span class="o">=</span> <span class="p">{};</span>
 
 <span class="n">array_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fruits</span><span class="p">);</span>
@@ -104,6 +103,8 @@ Specifically helping to maintain the reference counting correctly:</p>
 <span class="n">add_next_index_stringl</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fruits</span><span class="p">,</span> <span class="n">SL</span><span class="p">(</span><span class="s">&quot;orange&quot;</span><span class="p">));</span>
 <span class="n">add_next_index_stringl</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fruits</span><span class="p">,</span> <span class="n">SL</span><span class="p">(</span><span class="s">&quot;lemon&quot;</span><span class="p">));</span>
 <span class="n">add_next_index_stringl</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fruits</span><span class="p">,</span> <span class="n">SL</span><span class="p">(</span><span class="s">&quot;banana&quot;</span><span class="p">));</span>
+
+<span class="n">phalcon_array_append_str</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fruits</span><span class="p">,</span> <span class="n">SL</span><span class="p">(</span><span class="s">&quot;pear&quot;</span><span class="p">),</span> <span class="mi">0</span><span class="p">);</span>
 
 <span class="c1">// Get the first item in the array $fruits[0]</span>
 <span class="n">phalcon_array_fetch_long</span><span class="p">(</span><span class="o">&amp;</span><span class="n">first_item</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">fruits</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">PH_NOISY_CC</span><span class="p">);</span>
